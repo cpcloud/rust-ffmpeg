@@ -1,6 +1,9 @@
 use super::{flag, Context, Flags};
+use decoder;
+use frame;
 use util::format;
-use {decoder, frame, Error, Picture};
+use Error;
+use Picture;
 
 impl<'a> Picture<'a> {
     #[inline]

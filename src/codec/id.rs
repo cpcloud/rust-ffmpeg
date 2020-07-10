@@ -1,8 +1,6 @@
-use std::ffi::CStr;
-use std::str::from_utf8_unchecked;
+use std::{ffi::CStr, str::from_utf8_unchecked};
 
-use ffi::AVCodecID::*;
-use ffi::*;
+use ffi::{AVCodecID::*, *};
 use util::media;
 
 #[allow(non_camel_case_types)]

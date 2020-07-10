@@ -1,6 +1,4 @@
-use std::marker::PhantomData;
-use std::mem;
-use std::slice;
+use std::{marker::PhantomData, mem, slice};
 
 use ffi::*;
 use format;

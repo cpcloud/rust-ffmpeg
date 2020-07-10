@@ -1,14 +1,15 @@
-use std::mem;
-use std::ops::{Deref, DerefMut};
-use std::slice;
+use std::{
+    mem,
+    ops::{Deref, DerefMut},
+    slice,
+};
 
 use super::Frame;
 use color;
 use ffi::*;
 use libc::c_int;
 use picture;
-use util::chroma;
-use util::format;
+use util::{chroma, format};
 use Rational;
 
 #[derive(PartialEq, Eq)]
@@ -399,19 +400,27 @@ unsafe impl Component for (u8, u8, u8) {
 unsafe impl Component for [u8; 4] {
     #[inline(always)]
     fn is_valid(format: format::Pixel) -> bool {
-        format == format::Pixel::RGBA || format == format::Pixel::BGRA
-            || format == format::Pixel::ARGB || format == format::Pixel::ABGR
-            || format == format::Pixel::RGBZ || format == format::Pixel::BGRZ
-            || format == format::Pixel::ZRGB || format == format::Pixel::ZBGR
+        format == format::Pixel::RGBA
+            || format == format::Pixel::BGRA
+            || format == format::Pixel::ARGB
+            || format == format::Pixel::ABGR
+            || format == format::Pixel::RGBZ
+            || format == format::Pixel::BGRZ
+            || format == format::Pixel::ZRGB
+            || format == format::Pixel::ZBGR
     }
 }
 
 unsafe impl Component for (u8, u8, u8, u8) {
     #[inline(always)]
     fn is_valid(format: format::Pixel) -> bool {
-        format == format::Pixel::RGBA || format == format::Pixel::BGRA
-            || format == format::Pixel::ARGB || format == format::Pixel::ABGR
-            || format == format::Pixel::RGBZ || format == format::Pixel::BGRZ
-            || format == format::Pixel::ZRGB || format == format::Pixel::ZBGR
+        format == format::Pixel::RGBA
+            || format == format::Pixel::BGRA
+            || format == format::Pixel::ARGB
+            || format == format::Pixel::ABGR
+            || format == format::Pixel::RGBZ
+            || format == format::Pixel::BGRZ
+            || format == format::Pixel::ZRGB
+            || format == format::Pixel::ZBGR
     }
 }

@@ -1,15 +1,21 @@
-use std::ffi::CString;
-use std::mem::size_of;
-use std::ops::{Deref, DerefMut};
-use std::ptr;
+use std::{
+    ffi::CString,
+    mem::size_of,
+    ops::{Deref, DerefMut},
+    ptr,
+};
 
 use libc;
 
-use super::common::Context;
-use super::destructor;
+use super::{common::Context, destructor};
 use codec::traits;
 use ffi::*;
-use {format, ChapterMut, Dictionary, Error, Rational, StreamMut};
+use format;
+use ChapterMut;
+use Dictionary;
+use Error;
+use Rational;
+use StreamMut;
 
 pub struct Output {
     ptr: *mut AVFormatContext,

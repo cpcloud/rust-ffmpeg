@@ -23,8 +23,7 @@ pub use self::opened::Opened;
 
 use std::ffi::CString;
 
-use codec::Context;
-use codec::Id;
+use codec::{Context, Id};
 use ffi::*;
 use Codec;
 

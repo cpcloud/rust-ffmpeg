@@ -1,13 +1,18 @@
-use std::ffi::CString;
-use std::mem;
-use std::ops::{Deref, DerefMut};
-use std::ptr;
+use std::{
+    ffi::CString,
+    mem,
+    ops::{Deref, DerefMut},
+    ptr,
+};
 
-use super::common::Context;
-use super::destructor;
+use super::{common::Context, destructor};
 use ffi::*;
+use format;
 use util::range::Range;
-use {format, Codec, Error, Packet, Stream};
+use Codec;
+use Error;
+use Packet;
+use Stream;
 
 pub struct Input {
     ptr: *mut AVFormatContext,

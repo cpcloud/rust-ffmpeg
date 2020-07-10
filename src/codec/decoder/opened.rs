@@ -4,7 +4,8 @@ use super::{Audio, Decoder, Subtitle, Video};
 use codec::{Context, Profile};
 use ffi::*;
 use media;
-use {Error, Rational};
+use Error;
+use Rational;
 
 pub struct Opened(pub Decoder);
 

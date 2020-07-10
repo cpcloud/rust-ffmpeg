@@ -1,12 +1,12 @@
-use std::ffi::{CStr, CString};
-use std::mem;
-use std::ops::Index;
-use std::ptr;
-use std::slice;
-use std::str::from_utf8_unchecked;
+use std::{
+    ffi::{CStr, CString},
+    mem,
+    ops::Index,
+    ptr, slice,
+    str::from_utf8_unchecked,
+};
 
-use ffi::AVSampleFormat::*;
-use ffi::*;
+use ffi::{AVSampleFormat::*, *};
 use libc::{c_int, uint8_t};
 
 #[derive(Eq, PartialEq, Copy, Clone, Debug)]

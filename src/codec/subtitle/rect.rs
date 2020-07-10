@@ -1,10 +1,9 @@
-use std::ffi::CStr;
-use std::marker::PhantomData;
-use std::str::from_utf8_unchecked;
+use std::{ffi::CStr, marker::PhantomData, str::from_utf8_unchecked};
 
 use super::{Flags, Type};
 use ffi::*;
-use {format, Picture};
+use format;
+use Picture;
 
 pub enum Rect<'a> {
     None(*const AVSubtitleRect),

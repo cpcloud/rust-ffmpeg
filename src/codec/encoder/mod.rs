@@ -24,8 +24,7 @@ pub use self::decision::Decision;
 
 use std::ffi::CString;
 
-use codec::Context;
-use codec::Id;
+use codec::{Context, Id};
 use ffi::*;
 use Codec;
 

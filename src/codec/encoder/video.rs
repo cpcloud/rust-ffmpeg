@@ -1,13 +1,20 @@
-use std::ops::{Deref, DerefMut};
-use std::ptr;
+use std::{
+    ops::{Deref, DerefMut},
+    ptr,
+};
 
 use ffi::*;
 use libc::{c_float, c_int};
 
-use super::Encoder as Super;
-use super::{Comparison, Decision, MotionEstimation, Prediction};
+use super::{Comparison, Decision, Encoder as Super, MotionEstimation, Prediction};
 use codec::{traits, Context};
-use {color, format, frame, packet, Dictionary, Error, Rational};
+use color;
+use format;
+use frame;
+use packet;
+use Dictionary;
+use Error;
+use Rational;
 
 pub struct Video(pub Super);
 
@@ -422,7 +429,8 @@ impl Encoder {
         out: &mut P,
     ) -> Result<bool, Error> {
         unsafe {
-            if self.format() != frame.format() || self.width() != frame.width()
+            if self.format() != frame.format()
+                || self.width() != frame.width()
                 || self.height() != frame.height()
             {
                 return Err(Error::InvalidData);

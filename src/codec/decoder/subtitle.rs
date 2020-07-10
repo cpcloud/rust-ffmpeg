@@ -5,7 +5,8 @@ use libc::c_int;
 
 use super::Opened;
 use codec::Context;
-use {packet, Error};
+use packet;
+use Error;
 
 pub struct Subtitle(pub Opened);
 

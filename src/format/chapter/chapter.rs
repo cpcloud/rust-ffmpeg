@@ -1,5 +1,6 @@
 use ffi::*;
-use {DictionaryRef, Rational};
+use DictionaryRef;
+use Rational;
 
 use format::context::common::Context;
 

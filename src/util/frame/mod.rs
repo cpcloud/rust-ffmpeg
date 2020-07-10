@@ -12,7 +12,8 @@ pub use self::flag::Flags;
 
 use ffi::*;
 use libc::c_int;
-use {Dictionary, DictionaryRef};
+use Dictionary;
+use DictionaryRef;
 
 #[derive(PartialEq, Eq, Copy, Clone, Debug)]
 pub struct Packet {

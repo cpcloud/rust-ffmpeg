@@ -1,10 +1,11 @@
-use std::error;
-use std::ffi::{CStr, CString, NulError};
-use std::fmt;
-use std::str::{from_utf8_unchecked, FromStr};
+use std::{
+    error,
+    ffi::{CStr, CString, NulError},
+    fmt,
+    str::{from_utf8_unchecked, FromStr},
+};
 
-use ffi::AVPixelFormat::*;
-use ffi::*;
+use ffi::{AVPixelFormat::*, *};
 
 #[derive(Eq, PartialEq, Copy, Clone, Debug)]
 pub enum Pixel {

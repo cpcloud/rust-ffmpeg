@@ -1,5 +1,4 @@
-pub use util::format::{pixel, Pixel};
-pub use util::format::{sample, Sample};
+pub use util::format::{pixel, sample, Pixel, Sample};
 use util::interrupt;
 
 pub mod stream;
@@ -10,18 +9,21 @@ pub mod context;
 pub use self::context::Context;
 
 pub mod format;
-pub use self::format::{flag, Flags};
-pub use self::format::{list, Input, Output};
+pub use self::format::{flag, list, Flags, Input, Output};
 
 pub mod network;
 
-use std::ffi::{CStr, CString};
-use std::path::Path;
-use std::ptr;
-use std::str::from_utf8_unchecked;
+use std::{
+    ffi::{CStr, CString},
+    path::Path,
+    ptr,
+    str::from_utf8_unchecked,
+};
 
 use ffi::*;
-use {Dictionary, Error, Format};
+use Dictionary;
+use Error;
+use Format;
 
 pub fn register_all() {
     unsafe {

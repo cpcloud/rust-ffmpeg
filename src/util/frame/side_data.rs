@@ -1,11 +1,7 @@
-use std::ffi::CStr;
-use std::marker::PhantomData;
-use std::slice;
-use std::str::from_utf8_unchecked;
+use std::{ffi::CStr, marker::PhantomData, slice, str::from_utf8_unchecked};
 
 use super::Frame;
-use ffi::AVFrameSideDataType::*;
-use ffi::*;
+use ffi::{AVFrameSideDataType::*, *};
 use DictionaryRef;
 
 #[derive(Eq, PartialEq, Copy, Clone, Debug)]

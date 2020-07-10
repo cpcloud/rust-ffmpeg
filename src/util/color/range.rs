@@ -1,5 +1,4 @@
-use ffi::AVColorRange::*;
-use ffi::*;
+use ffi::{AVColorRange::*, *};
 
 #[derive(Eq, PartialEq, Clone, Copy, Debug)]
 pub enum Range {

@@ -1,7 +1,9 @@
-use std::ffi::{CStr, CString};
-use std::marker::PhantomData;
-use std::ptr;
-use std::str::from_utf8_unchecked;
+use std::{
+    ffi::{CStr, CString},
+    marker::PhantomData,
+    ptr,
+    str::from_utf8_unchecked,
+};
 
 use ffi::*;
 

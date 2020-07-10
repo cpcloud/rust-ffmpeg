@@ -3,7 +3,9 @@ use codec::{self, packet};
 use ffi::*;
 use format::context::common::Context;
 use libc::c_int;
-use {DictionaryRef, Discard, Rational};
+use DictionaryRef;
+use Discard;
+use Rational;
 
 pub struct Stream<'a> {
     context: &'a Context,

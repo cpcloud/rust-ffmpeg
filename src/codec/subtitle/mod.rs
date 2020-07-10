@@ -7,11 +7,9 @@ pub use self::rect::{Ass, Bitmap, Rect, Text};
 mod rect_mut;
 pub use self::rect_mut::{AssMut, BitmapMut, RectMut, TextMut};
 
-use std::marker::PhantomData;
-use std::mem;
+use std::{marker::PhantomData, mem};
 
-use ffi::AVSubtitleType::*;
-use ffi::*;
+use ffi::{AVSubtitleType::*, *};
 use libc::{c_uint, size_t, uint32_t};
 
 #[derive(Eq, PartialEq, Clone, Copy, Debug)]
@@ -147,9 +145,9 @@ impl<'a> Iterator for RectIter<'a> {
                 None
             } else {
                 self.cur += 1;
-                Some(Rect::wrap(*(*self.ptr)
-                    .rects
-                    .offset((self.cur - 1) as isize)))
+                Some(Rect::wrap(
+                    *(*self.ptr).rects.offset((self.cur - 1) as isize),
+                ))
             }
         }
     }
@@ -191,9 +189,9 @@ impl<'a> Iterator for RectMutIter<'a> {
                 None
             } else {
                 self.cur += 1;
-                Some(RectMut::wrap(*(*self.ptr)
-                    .rects
-                    .offset((self.cur - 1) as isize)))
+                Some(RectMut::wrap(
+                    *(*self.ptr).rects.offset((self.cur - 1) as isize),
+                ))
             }
         }
     }

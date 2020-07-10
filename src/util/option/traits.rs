@@ -1,12 +1,13 @@
 //! NOTE: this will be much better once specialization comes
 
-use std::ffi::CString;
-use std::mem;
+use std::{ffi::CString, mem};
 
 use ffi::*;
 use libc::{c_int, c_void, int64_t};
 use util::format;
-use {ChannelLayout, Error, Rational};
+use ChannelLayout;
+use Error;
+use Rational;
 
 macro_rules! check {
     ($expr:expr) => {

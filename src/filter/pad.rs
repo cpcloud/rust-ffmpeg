@@ -1,6 +1,4 @@
-use std::ffi::CStr;
-use std::marker::PhantomData;
-use std::str::from_utf8_unchecked;
+use std::{ffi::CStr, marker::PhantomData, str::from_utf8_unchecked};
 
 use ffi::*;
 use media;

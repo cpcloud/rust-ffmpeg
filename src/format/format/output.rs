@@ -1,12 +1,15 @@
 use std::path::Path;
 
-use std::ffi::{CStr, CString};
-use std::ptr;
-use std::str::from_utf8_unchecked;
+use std::{
+    ffi::{CStr, CString},
+    ptr,
+    str::from_utf8_unchecked,
+};
 
 use super::Flags;
+use codec;
 use ffi::*;
-use {codec, media};
+use media;
 
 pub struct Output {
     ptr: *mut AVOutputFormat,

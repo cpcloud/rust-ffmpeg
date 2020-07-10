@@ -1,6 +1,8 @@
-use std::iter::FromIterator;
-use std::ops::{Deref, DerefMut};
-use std::ptr;
+use std::{
+    iter::FromIterator,
+    ops::{Deref, DerefMut},
+    ptr,
+};
 
 use super::mutable;
 use ffi::*;

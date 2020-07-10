@@ -1,13 +1,13 @@
-use std::ptr;
-use std::rc::Rc;
+use std::{ptr, rc::Rc};
 
-use super::decoder::Decoder;
-use super::encoder::Encoder;
-use super::{threading, Compliance, Debug, Flags, Id, Parameters};
+use super::{
+    decoder::Decoder, encoder::Encoder, threading, Compliance, Debug, Flags, Id, Parameters,
+};
 use ffi::*;
 use libc::c_int;
 use media;
-use {Codec, Error};
+use Codec;
+use Error;
 
 pub struct Context {
     ptr: *mut AVCodecContext,

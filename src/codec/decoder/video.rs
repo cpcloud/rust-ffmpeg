@@ -7,9 +7,11 @@ use super::{slice, Opened};
 use codec::Context;
 use color;
 use frame;
-use util::chroma;
-use util::format;
-use {packet, Error, FieldOrder, Rational};
+use packet;
+use util::{chroma, format};
+use Error;
+use FieldOrder;
+use Rational;
 
 pub struct Video(pub Opened);
 

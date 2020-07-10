@@ -1,5 +1,4 @@
-use std::panic;
-use std::process;
+use std::{panic, process};
 
 use ffi::*;
 use libc::{c_int, c_void};

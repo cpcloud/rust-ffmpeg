@@ -1,13 +1,19 @@
-use std::ops::{Deref, DerefMut};
-use std::ptr;
+use std::{
+    ops::{Deref, DerefMut},
+    ptr,
+};
 
 use ffi::*;
 use libc::c_int;
 
 use super::Encoder as Super;
 use codec::{traits, Context};
+use frame;
+use packet;
 use util::format;
-use {frame, packet, ChannelLayout, Dictionary, Error};
+use ChannelLayout;
+use Dictionary;
+use Error;
 
 pub struct Audio(pub Super);
 

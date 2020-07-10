@@ -2,9 +2,11 @@ use std::ptr;
 
 use super::Delay;
 use ffi::*;
+use frame;
 use libc::{c_int, int64_t};
 use util::format;
-use {frame, ChannelLayout, Error};
+use ChannelLayout;
+use Error;
 
 #[derive(Eq, PartialEq, Copy, Clone)]
 pub struct Definition {

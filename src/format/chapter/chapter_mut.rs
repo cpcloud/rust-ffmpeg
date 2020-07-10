@@ -1,10 +1,11 @@
-use std::mem;
-use std::ops::Deref;
+use std::{mem, ops::Deref};
 
 use super::Chapter;
 use ffi::*;
 use format::context::common::Context;
-use {Dictionary, DictionaryMut, Rational};
+use Dictionary;
+use DictionaryMut;
+use Rational;
 
 // WARNING: index refers to the offset in the chapters array (starting from 0)
 // it is not necessarly equal to the id (which may start at 1)

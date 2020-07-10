@@ -1,11 +1,14 @@
-use std::mem;
-use std::ptr;
-use std::rc::Rc;
+use std::{mem, ptr, rc::Rc};
 
 use super::destructor::{self, Destructor};
 use ffi::*;
 use libc::{c_int, c_uint};
-use {media, Chapter, ChapterMut, DictionaryRef, Stream, StreamMut};
+use media;
+use Chapter;
+use ChapterMut;
+use DictionaryRef;
+use Stream;
+use StreamMut;
 
 pub struct Context {
     ptr: *mut AVFormatContext,

@@ -12,21 +12,17 @@ pub use sys as ffi;
 
 #[macro_use]
 pub mod util;
-pub use util::channel_layout::{self, ChannelLayout};
-pub use util::chroma;
-pub use util::color;
-pub use util::dictionary;
-pub use util::dictionary::Mut as DictionaryMut;
-pub use util::dictionary::Owned as Dictionary;
-pub use util::dictionary::Ref as DictionaryRef;
-pub use util::error::Error;
-pub use util::frame::{self, Frame};
-pub use util::mathematics::{self, rescale, Rescale, Rounding};
-pub use util::media;
-pub use util::option;
-pub use util::picture;
-pub use util::rational::{self, Rational};
-pub use util::time;
+pub use util::{
+    channel_layout::{self, ChannelLayout},
+    chroma, color, dictionary,
+    dictionary::{Mut as DictionaryMut, Owned as Dictionary, Ref as DictionaryRef},
+    error::Error,
+    frame::{self, Frame},
+    mathematics::{self, rescale, Rescale, Rounding},
+    media, option, picture,
+    rational::{self, Rational},
+    time,
+};
 
 #[cfg(feature = "format")]
 pub mod format;

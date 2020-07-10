@@ -1,5 +1,4 @@
-use ffi::AVAudioServiceType::*;
-use ffi::*;
+use ffi::{AVAudioServiceType::*, *};
 
 #[derive(Eq, PartialEq, Clone, Copy, Debug)]
 pub enum AudioService {

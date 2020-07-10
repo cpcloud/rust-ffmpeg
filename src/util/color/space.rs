@@ -1,8 +1,6 @@
-use std::ffi::CStr;
-use std::str::from_utf8_unchecked;
+use std::{ffi::CStr, str::from_utf8_unchecked};
 
-use ffi::AVColorSpace::*;
-use ffi::*;
+use ffi::{AVColorSpace::*, *};
 
 #[derive(Eq, PartialEq, Clone, Copy, Debug)]
 pub enum Space {

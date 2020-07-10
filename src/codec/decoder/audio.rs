@@ -6,8 +6,11 @@ use libc::c_int;
 use super::Opened;
 use codec::Context;
 use frame;
+use packet;
 use util::format;
-use {packet, AudioService, ChannelLayout, Error};
+use AudioService;
+use ChannelLayout;
+use Error;
 
 pub struct Audio(pub Opened);
 

@@ -2,9 +2,10 @@ use std::ptr;
 
 use super::Flags;
 use ffi::*;
+use frame;
 use libc::c_int;
 use util::format;
-use {frame, Error};
+use Error;
 
 #[derive(Eq, PartialEq, Copy, Clone, Debug)]
 pub struct Definition {
@@ -128,7 +129,8 @@ impl Context {
     }
 
     pub fn run(&mut self, input: &frame::Video, output: &mut frame::Video) -> Result<(), Error> {
-        if input.format() != self.input.format || input.width() != self.input.width
+        if input.format() != self.input.format
+            || input.width() != self.input.width
             || input.height() != self.input.height
         {
             return Err(Error::InputChanged);
@@ -140,7 +142,8 @@ impl Context {
             }
         }
 
-        if output.format() != self.output.format || output.width() != self.output.width
+        if output.format() != self.output.format
+            || output.width() != self.output.width
             || output.height() != self.output.height
         {
             return Err(Error::OutputChanged);

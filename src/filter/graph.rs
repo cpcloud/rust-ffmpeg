@@ -1,6 +1,8 @@
-use std::ffi::{CStr, CString};
-use std::ptr;
-use std::str::from_utf8_unchecked;
+use std::{
+    ffi::{CStr, CString},
+    ptr,
+    str::from_utf8_unchecked,
+};
 
 use super::{Context, Filter};
 use ffi::*;

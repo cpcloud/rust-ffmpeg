@@ -1,6 +1,4 @@
-use std::ffi::CString;
-use std::marker::PhantomData;
-use std::ops::Deref;
+use std::{ffi::CString, marker::PhantomData, ops::Deref};
 
 use super::immutable;
 use ffi::*;
